@@ -1,4 +1,4 @@
-const BASE_URL = "/api/tasks";
+const BASE_URL = import.meta.env.VITE_API_URL || "/api/tasks";
 
 async function handleResponse(res) {
   const data = await res.json().catch(() => ({}));
